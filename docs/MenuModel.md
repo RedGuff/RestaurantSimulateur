@@ -6,8 +6,8 @@
 | --- | ---
 | id | number
 | name | string
-| platList | Array<PlatModel>
-| ingredientList | Array<IngredientModel>
+| platList | Array : PlatModel
+| ingredientList | Array : IngredientModel 
 
 ## Méthhodes
 

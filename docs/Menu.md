@@ -4,7 +4,7 @@
 
 | name | type
 | --- | ---
-| menuList | Array<MenuModel>
+| menuList | Array : MenuModel
 
 ## Méthhodes
 
