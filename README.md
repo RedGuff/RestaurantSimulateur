@@ -15,18 +15,18 @@ Le client dispose d'une x somme en arrivant et une vérification doit être effe
 
 | Nom de la classe
 | ----
-| [Restaurant](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Restaurant.md)
-| Emoloyee
-| [Menu](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Menu.md)
-| [MenuModel](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/MenuModel.md)
-| Plat
-| PlatModel
-| Ingredient
-| IngredientModel
-| Order
-| OrderModel
-| Client
-| ClientModel
+| [[Restaurant](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Restaurant.md)
+| [Employee](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Employee.md)
+| [[Menu](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Menu.md)
+| [[MenuModel](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/MenuModel.md)
+| [Plat](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Plat.md)
+| [PlatModel](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Platmodel.md)
+| [Ingredient](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Ingredient.md)
+| [IngredientModel](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/IngredientModel.md)
+| [Order](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Order.md)
+| [OrderModel](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/OrderModel.md)
+| [Client](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Client.md)
+| [ClientModel](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/ClientModel.md)
 
 
 
