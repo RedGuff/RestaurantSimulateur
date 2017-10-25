@@ -1,9 +1,5 @@
 # Restaurant Simulateur 2018
 
-
-[link text itself]: http://www.reddit.com
-
-
 ## Prérequis - environnement de développement
 - Git
 - Node js
@@ -21,7 +17,7 @@ Le client dispose d'une x somme en arrivant et une vérification doit être effe
 | ----
 | Restaurant
 | Emoloyee
-| Menu
+| [https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Menu.md](Menu)
 | MenuModel
 | Plat
 | PlatModel
