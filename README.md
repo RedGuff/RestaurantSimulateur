@@ -11,6 +11,8 @@ Le restaurant comprend des employées disposant des différents grades
 Chaque commande passé par un client comprend un menu qui lui contient un plat.s composé.s d'ingrédient.s
 Le client dispose d'une x somme en arrivant et une vérification doit être effectuée lors du passage de la commande s'il dispose de fonds suffisant pour obtenir sa commande. 
 
+![uml](https://raw.githubusercontent.com/gnatty/RestaurantSimulateur/master/docs/img/uml.png)
+
 ## Liste des classes
 
 | Nom de la classe
