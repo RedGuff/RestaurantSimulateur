@@ -6,7 +6,7 @@
 | --- | ---
 | employeeList | Array : EmployeeModel
 
-## Méthhodes
+## Méthodes
 
 | name | params | return
 | --- | --- | ---

@@ -8,7 +8,7 @@
 | name | string
 | price | float
 
-## Méthhodes
+## Méthodes
 
 | name | params | return
 | --- | --- | ---

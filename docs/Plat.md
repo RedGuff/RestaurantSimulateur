@@ -6,7 +6,7 @@
 | --- | ---
 | platList | Array : PlatList
 
-## Méthhodes
+## Méthodes
 
 | name | params | return
 | --- | --- | ---

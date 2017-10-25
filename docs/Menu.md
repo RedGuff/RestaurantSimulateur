@@ -6,7 +6,7 @@
 | --- | ---
 | menuList | Array : MenuModel
 
-## Méthhodes
+## Méthodes
 
 | name | params | return
 | --- | --- | ---

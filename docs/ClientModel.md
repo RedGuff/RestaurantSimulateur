@@ -8,7 +8,7 @@
 | name | string
 | solde | float
 
-## Méthhodes
+## Méthodes
 
 | name | params | return
 | --- | --- | ---

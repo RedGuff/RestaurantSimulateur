@@ -9,7 +9,7 @@
 | role | string
 | totalOrderReceived | number - default 0
 
-## Méthhodes
+## Méthodes
 
 | name | params | return
 | --- | --- | ---

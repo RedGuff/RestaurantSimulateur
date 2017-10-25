@@ -6,7 +6,7 @@
 | --- | ---
 | clientList | Array : ClientModel
 
-## Méthhodes
+## Méthodes
 
 | name | params | return
 | --- | --- | ---

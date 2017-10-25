@@ -6,7 +6,7 @@
 | --- | ---
 | ingredientList | Array : IngredientModel
 
-## Méthhodes
+## Méthodes
 
 | name | params | return
 | --- | --- | ---
