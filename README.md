@@ -15,10 +15,10 @@ Le client dispose d'une x somme en arrivant et une vérification doit être effe
 
 | Nom de la classe
 | ----
-| Restaurant
+| [Restaurant](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Restaurant.md)
 | Emoloyee
-| [https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Menu.md](Menu)
-| MenuModel
+| [Menu](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Menu.md)
+| [MenuModel](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/MenuModel.md)
 | Plat
 | PlatModel
 | Ingredient
