@@ -17,6 +17,7 @@ Le client dispose d'une x somme en arrivant et une vérification doit être effe
 | ----
 | [[Restaurant](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Restaurant.md)
 | [Employee](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Employee.md)
+| [EmployeeModel](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/EmployeeModel.md)
 | [[Menu](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Menu.md)
 | [[MenuModel](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/MenuModel.md)
 | [Plat](https://github.com/gnatty/RestaurantSimulateur/blob/master/docs/Plat.md)
