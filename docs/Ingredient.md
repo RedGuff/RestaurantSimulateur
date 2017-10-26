@@ -10,7 +10,7 @@
 
 | name | params | return
 | --- | --- | ---
-| add() | ingredient : IngredientModel | void 
+| set() | ingredient : IngredientModel | void 
 | remove() | ingredientId : number | boolean 
 | toString() | null | string
 
