@@ -4,7 +4,7 @@
 
 | name | type
 | --- | ---
-| -listPlat | Array : Object
+| -listPlat | Array : Ingredients
 
 ## Méthodes
 
