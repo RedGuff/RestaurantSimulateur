@@ -23,7 +23,7 @@
 | addRestaurantMenu()|menu | Object
 | removeRestaurantMenu()|menu | Object
 | addRestaurantEmployees()|employee | Object
-| removeRestaurantEmployees()employee | Object
+| removeRestaurantEmployees()|employee | Object
 | setNumberSit()|numberSit | number
 | getNumberSit() |null| number
 | restaurantToString()| null | string 
