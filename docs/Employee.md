@@ -13,8 +13,6 @@
 | remove() | employeeId : number | boolean 
 | updateRole() | employeeId : number, role : string | void 
 | toString() | null | string 
-
-
 |+addEmploye()|employee : Object| bool |add an employee
 |+removeEmployee()|name : String|  bool |remove an employee
 |+updateRole()|name : String,newRole : String| bool |update the role of an employee
