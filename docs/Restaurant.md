@@ -6,10 +6,11 @@
 | --- | ---
 | name | string
 | city | string
-| orderList | Array : OrderModel
-| employeeList | Array : EmployeeModel
-| menuList | Array : MenuModel
-| ingredientList | Array : IngredientModel
+| numberSit | number
+| listEmployees | Array : Employee
+| menuList | Array : Menu
+
+
 
 ## Méthodes
 
