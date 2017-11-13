@@ -4,7 +4,7 @@
 
 | name | type
 | --- | ---
-| -listMenu | Array : Plat
+| -listMenu | Array: Plat
 
 ## Méthodes
 
