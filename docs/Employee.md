@@ -4,7 +4,7 @@
 
 | name | type
 | --- | ---
-| -listEmployees | Array : Object
+| -listEmployees | Array: Object
 
 ## Méthodes
 
