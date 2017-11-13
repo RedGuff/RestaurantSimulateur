@@ -7,8 +7,8 @@
 | -name | String
 | -city | String
 | -numberSit | String
-| -listEmployees | Array : Employee
-| -menuList | Array : Menu
+| -listEmployees | Array: Employee
+| -menuList | Array: Menu
 
 
 
