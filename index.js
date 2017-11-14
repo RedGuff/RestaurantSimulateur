@@ -1,8 +1,21 @@
+/**
+ * Class Ingredients
+ */
 class Ingredients {
+  /**
+  * @constructor
+  * @param {Object} listIngredient
+  */
   constructor(listIngredient){
     this.listIngredient = listIngredient;
   }
 
+  /**
+   * add Ingredient
+   * @param {Object} id
+   * @param {Int} value
+   * @return {Bool}
+   */
   addIngredient (id, value){
     if (! this.listIngredient[id]) {
       return false;
@@ -12,8 +25,13 @@ class Ingredients {
 
     return true;
   }
-
-
+  
+  /**
+   * remove Ingredient
+   * @param {Object} id
+   * @param {Int} value
+   * @return {Bool}
+   */
   removeIngredient (id, value){
 
     if (! this.listIngredient[id] && ! this.listIngredient[id].nb) {
@@ -24,19 +42,27 @@ class Ingredients {
 
     return true;
   }
-
-
+  
+  /**
+   * Get list Ingredient
+   * @return {Objetc} this._listIngredient
+   */
   get listIngredient(){
     return this._listIngredient;
   }
 
-
+  /**
+   * Set list Ingredient
+   * @param {Objetc} listIngredient
+   * @return {Ingredient}
+   */
   set listIngredient(listIngredient){
     this._listIngredient = listIngredient;
   }
 }
 
-//-----------------------ingrediant-----------------------------
+//-----------------------ingredientsMock-----------------------------
+
 const listIngredient = {
   'viande':{
     'price' : 1.20,
@@ -64,13 +90,22 @@ const listIngredient = {
   }
 };
 
-
-
+/**
+ * Class Plat
+ */
 class Plat{
+  /**
+  * @constructor
+  */
   constructor(){
     this._listPlat = {};
   }
 
+  /**
+   * add Plat
+   * @param {Object} plat
+   * @return {Bool}
+   */
   addPlat(plat) {
     if (typeof plat != 'object') {
       return false;
@@ -81,6 +116,11 @@ class Plat{
     return true;
   }
 
+  /**
+   * remove Plat
+   * @param {Object} name
+   * @return {Bool}
+   */
   removePlat (name) {
     if (! name && ! name.length) {
       return false;
@@ -91,48 +131,58 @@ class Plat{
     return true;
   }
 
+  /**
+   * Get list Plat
+   * @return {object} this._listPlat
+   */
   get listPlat(){
     return this._listPlat;
   }
 
-
+  /**
+   * Set list Plat
+   * @param {Object} listPlat
+   * @return {Plat}
+   */
   set listPlat(listPlat){
     this._listPlat = listPlat;
   }
 }
 
-//-------------------------------plats---------------------------
-const hamburgers = {
+//-------------------------------platsMock---------------------------
+const HAMBURGERS = {
   'hamburgers' : {
-    'ingredient1' : 'viande',
-    'ingredient2' : 'pain',
-    'ingredient3' : 'salade'
+    'ingredient1' : listIngredient['viande'],
+    'ingredient2' : listIngredient['pain'],
+    'ingredient3' : listIngredient['salade']
   }
 };
 
-const sandwichs = {
+const SANDWICHS = {
   'sandwichs': {
-    'ingredient1' : 'viande',
-    'ingredient2' : 'pain',
-    'ingredient3' : 'salade'
+    'ingredient1' : listIngredient['viande'],
+    'ingredient2' : listIngredient['pain'],
+    'ingredient3' : listIngredient['salade']
   }
 };
 
-let plats = new Plat();
-/* plats.addPlat(hamburgers);
- plats.addPlat(sandwichs);
- plats.removePlat('hamburgers');
- console.log(plats._listPlat);
 
-*/
-
-
-//---------------------------------------
+/**
+ * Class Employee
+ */
 class Employee{
+  /**
+  * @constructor
+  */
   constructor(){
     this._listEmployees = {};
   }
 
+  /**
+   * add Employe
+   * @param {Object} employee
+   * @return {Bool}
+   */
   addEmploye(employee) {
     if (typeof employee != 'object') {
       return false;
@@ -142,68 +192,101 @@ class Employee{
     return true;
   }
 
-  removeEmployee (name) {
-    if (! name && ! name.length) {
+  /**
+   * remove Employee
+   * @param {Object} employee
+   * @return {Bool}
+   */
+  removeEmployee (employee) {
+    if (! employee && ! employee.length) {
       return false;
     }
 
-    delete this._listEmployees[name];
+    delete this._listEmployees[employee];
     return true;
   }
 
-  updateRole(name,newRole){
-    if (! name && ! name.length) {
+  /**
+   * update Role
+   * @param {Object} employee
+   * @param {string} newRole
+   * @return {Bool}
+   */
+  updateRole(employee,newRole){
+    if (! employee && ! employee.length) {
       return false;
     }
 
-    this._listEmployees[name].role = newRole;
-    return true;
-  }
-  increaseTotalOrderReceive(name){
-    
-    console.log(this._listEmployees[name].role);
-    this._listEmployees[name].totalOrderReceived ++;
+    this._listEmployees[employee].role = newRole;
     return true;
   }
   
+  /**
+   * increase Total Order Receive
+   * @param {Int} employee
+   * @return {Employees}
+   */
+  increaseTotalOrderReceive(employee){
+    
+    this._listEmployees[employee].totalOrderReceived ++;
+    return this;
+  }
+  
+  /**
+   * Get list Employee
+   * @return {object} this._listEmployees
+   */
   get listEmployee(){
     return this._listEmployees;
   }
 
-
+  /**
+   * Set list Employee
+   * @param {object} listEmployees
+   * @return {Employee}
+   */
   set listEmployee(listEmployees){
     this._listEmployees = listEmployees;
   }
 }
 
-//--------------------employee-----------------------
-const Toto = {
-  'Toto' : {
+//------------------------------employeesMock-----------------------
+
+const TOTO = {
+  '1' : {
+    'id' : 1,
     'name' : 'Toto',
     'role' : 'Cuisinier',
-    'totalOrderReceived' : 2
+    'totalOrderReceived' : 0
   }
 };
 
-const Sophie = {
-  'Sophie' : {
+const SOPHIE = {
+  '2' : {
+    'id' : 2,
     'name' : 'Sophie',
     'role' : 'Serveuse',
-    'totalOrderReceived' : 2
+    'totalOrderReceived' : 0
   }
 };
 
 
-
-
-//--------------------------------------------------------------Menu-------------------------------
-
-
+/**
+ * Class Menu
+ */
 class Menu{
+  /**
+  * @constructor
+  */
   constructor(){
     this._listMenu = {};
   }
 
+  /**
+   * add Menu
+   * @param {Object} plat
+   * @return {Bool}
+   */
   addMenu(plat) {
     if (typeof plat != 'object') {
       return false;
@@ -214,6 +297,11 @@ class Menu{
     return true;
   }
 
+  /**
+   * remove Menu
+   * @param {Object} name
+   * @return {Bool} 
+   */
   removeMenu (name) {
     if (! name && ! name.length) {
       return false;
@@ -224,154 +312,118 @@ class Menu{
     return true;
   }
 
+  /**
+   * Get list Menu
+   * @return {object} this._listMenu;
+   */
   get listMenu(){
     return this._listMenu;
   }
 
-
+  /**
+   * Set list Menu
+   * @param {string} listMenu
+   * @return {Menu}
+   */
   set listMenu(listMenu){
     this._listMenu= listMenu;
   }
 }
 
-const Enfant = {
-  'Enfant' : {
-    'name' : 'Enfant',
-    'plat': sandwichs
+//-------------------------------menusMock---------------------------
+
+const CHILD = {
+  'Child' : {
+    'name' : 'Child',
+    'plat': SANDWICHS
   }
 };
 
-const Truc = {
+const TRUC = {
   'truc' : {
     'name' : 'Truc',
-    'plat' : hamburgers
+    'plat' : HAMBURGERS
   }
 };
 
-//----------------------------------------------------------Order--------------------------------------------------
 
 
-class Order{
-  constructor(){
-    this._listOrder = {};
-  }
-
-  addOrder(order) {
-    if (typeof order != 'object') {
-      return false;
-    }
-
-    Object.assign(this._listOrder, order);
-
-    return true;
-  }
-
-  removeOrder (idOrder) {
-    if (! idOrder && ! idOrder.length) {
-      return false;
-    }
-
-    delete this._listOrder[idOrder];
-
-    return true;
-  }
-  
-  updateState(name,){
-    if (! name && ! name.length) {
-      return false;
-    }
-    
-    if (this._listOrder[name].state){
-      this._listOrder[name].state = false;
-    }
-    else{
-      this._listOrder[name].state = true;
-    }
-    
-    return true;
-  }
-
-  get listOrder(){
-    return this._listOrder;
-  }
-
-
-  set listOrder(listOrder){
-    this._listOrder = listOrder;
-  }
-}
-
-//-------------------------------order---------------------------
-
-const Order1 = {
-  'Order1':{
-    'clientId'  : 1,
-    'employeeId': 2,
-    'date'    : new Date("December 17, 1995 03:24:00"),
-    'totalPrice': 23,
-    'state'   : true,   
-    'menu' : Enfant
-  }
-}
-const Order2 = {
-  'Order2':{
-    'clientId'  : 3,
-    'employeeId': 2,
-    'date'    : new Date("December 18, 1995 03:24:00"),
-    'totalPrice': 54,
-    'state'   : false,   
-    'state'   : false, 
-    'menu' : Truc
-  }
-}
-
+/**
+ * Class Client
+ */
 class Client{
+  /**
+  * @constructor
+  */
   constructor(){
 	  this._listClient = {};
   }
 
-  addClient(name) {
-    if (typeof name != 'object') {
+  /**
+   * add Client
+   * @param {Object} client
+   * @return {Bool}
+   */
+  addClient(client) {
+    if (typeof client != 'object') {
       return false;
     }
 
-  Object.assign(this._listClient, name);
+  Object.assign(this._listClient, client);
 
     return true;
   }
 
-  removeClient (name) {
-    if (! name && ! name.length) {
+  /**
+   * Get
+   * @param {Object} client
+   * @return {Bool} 
+   */
+  removeClient (client) {
+    if (! client && ! client.length) {
       return false;
     }
 
-    delete this._listClient[name];
+    delete this._listClient[client];
 
     return true;
   }
 
-
+  /**
+   * Get
+   * @param {string} password
+   * @param {float} sold
+   * @return {Client}
+   */
   decreaseSold(client,sold) {
     
     this._listClient[client].sold -= sold;
-    return true;
+    return this;
   }
 
-
+  /**
+   * Get list Client
+   * @return {object} this._listClient
+   */
   get listClient(){
     return this._listClient;
   }
 
-
+  /**
+   * Set list Client
+   * @param {object} listClient
+   * @return {Client}
+   */
   set listClient(listClient){
     this._listClient= listClient;
   }
 }
 
+//-------------------------------ClientsMock---------------------------
 
 const GUILLAUME= {
-  'Guillaume' : {
-     'id' : 1,
+  '1' : {
+    'id' : 1,
     'name' : 'Guillaume',
     'sold': 50
   }
@@ -379,15 +431,143 @@ const GUILLAUME= {
 
 
 const MARTY = {
-  'Marty' : {
-    'id' : 2, 
+  '2' : { 
+    'id' : 2,
 	'name' : 'Marty',
-    'sold': 10
+    'sold': 70
 	}
 };
 
+/**
+ * Class Order
+ */
+class Order{
+  /**
+  * @constructor
+  */
+  constructor(){
+    this._listOrder = {};
+  }
 
-const Restaurant = class Restaurant {
+  /**
+   * add Order
+   * @param {Object} order
+   * @return {Bool}
+   */
+  addOrder(order) {
+    if (typeof order != 'object') {
+      return false;
+    }
+    
+    Object.assign(this._listOrder, order);
+
+    return true;
+  }
+  
+  /**
+   * remove Order
+   * @param {Object} Order
+   * @return {Bool}
+   */
+  removeOrder (Order) {
+    if (! Order && ! Order.length) {
+      return false;
+    }
+
+    delete this._listOrder[Order];
+
+    return true;
+  }
+  
+  /**
+   * update State
+   * @param {Object} Order
+   * @return {Bool}
+   */
+  updateState(Order){
+    if (! Order && ! Order.length) {
+      return false;
+    }
+    
+    if (this._listOrder[Order].state){
+      this._listOrder[Order].state = false;
+    }
+    else{
+      this._listOrder[Order].state = true;
+    }
+    
+    return true;
+  }
+  
+  /**
+   * verif Sold
+   * @param {Object} orders
+   * @return {Bool}
+   */
+  verifSold(orders){
+      
+    for (let element in orders) {
+      if(orders[element].totalPrice > orders[element].client.sold){ 
+      
+        console.log(orders.client.name +' n\'a pas assez de solde');
+        return false;
+      }
+
+
+    }
+      return true
+  }      
+    
+  /**
+   * Get list Order
+   * @return {Object} this._listOrder
+   */
+  get listOrder(){
+    return this._listOrder;
+  }
+
+  /**
+   * Set list Order
+   * @param {Object} listOrder
+   * @return {Order}
+   */
+  set listOrder(listOrder){
+    this._listOrder = listOrder;
+  }
+}
+
+//-------------------------------ordersMock---------------------------
+const ORDER1 = {
+  '1' : {
+
+    'client'  : GUILLAUME['1'],
+    'employee': SOPHIE['2'],
+    'date'    : new Date("December 17, 1995 03:24:00"),
+    'totalPrice': 24,
+    'state'   : true,
+    'menu' : CHILD
+  }};
+  const ORDER2 ={
+    '2' : {
+    'client'  : MARTY['2'],
+    'employee': SOPHIE['2'],
+    'date'    : new Date("December 18, 1995 03:24:00"),
+    'totalPrice': 35,
+    'state'   : false,
+    'menu' : TRUC
+
+  }};
+
+/**
+ * Class Restaurant
+ */
+class Restaurant {
+    /**
+   * @constructor
+   * @param {String} name
+   * @param {String} city
+   * @param {String} numberSit
+   */
 	constructor(name, city, numberSit){
 		this._name=name;
 		this._city=city;
@@ -398,57 +578,130 @@ const Restaurant = class Restaurant {
 
 	}
   
-
-addRestaurantMenu(menu) {
-  
+  /**
+   * add Restaurant Menu
+   * @param {Object} menu
+   * @return {Restaurant}
+   */
+  addRestaurantMenu(menu) {
     this._menuList.addMenu(menu);
-  
   }
-removeRestaurantMenu (name) {
   
+  /**
+   * remove Restaurant Menu
+   * @param {Object} menu
+   * @return {Restaurant}
+   */
+  removeRestaurantMenu (menu) {
     this._menuList.removeMenu(menu);
-  
   }
+  
+  /**
+   * add Restaurant Employees
+   * @param {Object} employee
+   * @return {Restaurant}
+   */
   addRestaurantEmployees(employee) {
     
    this._listEmployees.addEmploye(employee);
     
   }
+  
+  /**
+   * remove Restaurant Employees
+   * @param {Object} employee
+   * @return {Restaurant}
+   */
   removeRestaurantEmployees (employee) {
+    
     this._listEmployees.removeEmployee(employee);
+    
   }
 
-
-
+  
+  /**
+   * Get name
+   * @return {String} this._name
+   */
+  get name(){
+    return this._name;
+  }
+  
+  /**
+   * Set name
+   * @param {String} name
+   * @return {Restaurant}
+   */
   set name(name){
     this._name = name;
   }
-	get name(){
-		return this._name;
-	}
+  
+  /**
+   * Get city
+   * @return {String} this._city
+   */
+  get city(){
+    return this._city;
+  }
 
+  /**
+   * Set city
+   * @param {String} city
+   * @return {Restaurant}
+   */
   set city(city){
     this._city = city;
   }
-	get city(){
-		return this._city;
+  
+  /**
+   * Get number Sit
+   * @return {String} this._numberSit
+   */
+  get numberSit(){
+    return this._numberSit;
+  }
 
-	}
-
+  /**
+   * Get number Sit
+   * @param {string} numberSit
+   * @return {Restaurant} 
+   */
   set numberSit(numberSit){
     this._numberSit = numberSit;
   }
-	get numberSit(){
-		return this._numberSit;
-	}
-	restaurantToString(){
-		console.log('nom : ' + this._name);
-		console.log(', city : '+ this._city);
-		console.log('numberSit : '+this._numberSit);
-		console.log(', listEmployee : ');
-		console.log(this._listEmployees);
-		console.log(', listMenu : ');
-		console.log(this._menuList);
+  
+  /**
+   * restaurant To String
+   * @return {Restaurant}
+   */
+  restaurantToString(){
+    console.log('name: ' + this._name);
+    console.log('city: '+ this._city);
+    console.log('numberSit: '+this._numberSit);
+    console.log('listEmployee: ');
+    console.log(this._listEmployees);
+    console.log('listMenu: ');
+    console.log(this._menuList);
 		
-	}
+  }
 }
+
+let menus = new Menu();
+let orders = new Order(); 
+let plats = new Plat();
+let employes = new Employee();
+let clients = new Client();
+let mcdo = new Restaurant("mcdo","paris",150);
+let quick = new Restaurant("quick","paris",100);
+
+
+mcdo.addRestaurantMenu(CHILD);
+mcdo.addRestaurantMenu(TRUC);
+mcdo.addRestaurantEmployees(SOPHIE);
+console.log(mcdo.restaurantToString());
+
+
+quick.addRestaurantMenu(CHILD);
+quick.addRestaurantMenu(TRUC);
+quick.addRestaurantEmployees(TOTO);
+console.log(quick.restaurantToString());
