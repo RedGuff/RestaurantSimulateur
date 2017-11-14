@@ -223,7 +223,7 @@ class Employee{
   
   /**
    * increase Total Order Receive
-   * @param {Int} employee
+   * @param {Object} employee
    * @return {Employees}
    */
   increaseTotalOrderReceive(employee){
@@ -686,14 +686,8 @@ class Restaurant {
   }
 }
 
-let menus = new Menu();
-let orders = new Order(); 
-let plats = new Plat();
-let employes = new Employee();
-let clients = new Client();
-let mcdo = new Restaurant("mcdo","paris",150);
-let quick = new Restaurant("quick","paris",100);
-
+let mcdo = new Restaurant("mcdo","Paris",150);
+let quick = new Restaurant("quick","Paris",100);
 
 mcdo.addRestaurantMenu(CHILD);
 mcdo.addRestaurantMenu(TRUC);
